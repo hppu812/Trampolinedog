@@ -258,7 +258,7 @@ function update() {
 
   // 敵の画像を表示
   var enemyImage = new Image();
-  enemyImage.src = "../images/character-02/base.png";
+  enemyImage.src = "./images/character-02/base.png";
 
   // 敵情報ごとに当たり判定を行う
   for (const enemy of enemies) {
