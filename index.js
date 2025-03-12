@@ -258,7 +258,7 @@ function update() {
 
   // 敵の画像を表示
   var enemyImage = new Image();
-  enemyImage.src = "./images/character-02/base.png";
+  enemyImage.src = "./Trampolinedog/images/character-02/base.png";
 
   // 敵情報ごとに当たり判定を行う
   for (const enemy of enemies) {
@@ -269,7 +269,7 @@ function update() {
   var image = new Image();
   if (isGameOver) {
     // ゲームオーバーの場合にはゲームオーバーの画像が表示する
-    image.src = "../images/character-01/game-over.png";
+    image.src = "./Trampolinedog/images/character-01/game-over.png";
   } else if (isJump) {
     image.src = `../images/character-01/jump-${
       toRight ? "right" : "left"
