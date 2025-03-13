@@ -271,11 +271,11 @@ function update() {
     // ゲームオーバーの場合にはゲームオーバーの画像が表示する
     image.src = "./Trampolinedog/images/character-01/game-over.png";
   } else if (isJump) {
-    image.src = `../images/character-01/jump-${
+    image.src = `./Trampolinedog/images/character-01/jump-${
       toRight ? "right" : "left"
     }-000.png`;
   } else {
-    image.src = `../images/character-01/walk-${toRight ? "right" : "left"}-${
+    image.src = `./Trampolinedog/images/character-01/walk-${toRight ? "right" : "left"}-${
       "00" + Math.floor(walkingCount / walkRange)
     }.png`;
   }
@@ -283,7 +283,7 @@ function update() {
 
   // 地面の画像を表示
   var groundImage = new Image();
-  groundImage.src = "../images/ground-01/base.png";
+  groundImage.src = "./Trampolinedog/images/ground-01/base.png";
   for (const block of blocks) {
     ctx.drawImage(groundImage, block.x, block.y, block.w, block.h);
   }
