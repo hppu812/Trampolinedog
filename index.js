@@ -258,7 +258,7 @@ function update() {
 
   // 敵の画像を表示
   var enemyImage = new Image();
-  enemyImage.src = "./Trampolinedog/images/character-02/base.png";
+  enemyImage.src = "./images/character-02/base.png";
 
   // 敵情報ごとに当たり判定を行う
   for (const enemy of enemies) {
@@ -269,13 +269,13 @@ function update() {
   var image = new Image();
   if (isGameOver) {
     // ゲームオーバーの場合にはゲームオーバーの画像が表示する
-    image.src = "./Trampolinedog/images/character-01/game-over.png";
+    image.src = "./images/character-01/game-over.png";
   } else if (isJump) {
-    image.src = `./Trampolinedog/images/character-01/jump-${
+    image.src = `./images/character-01/jump-${
       toRight ? "right" : "left"
     }-000.png`;
   } else {
-    image.src = `./Trampolinedog/images/character-01/walk-${toRight ? "right" : "left"}-${
+    image.src = `./images/character-01/walk-${toRight ? "right" : "left"}-${
       "00" + Math.floor(walkingCount / walkRange)
     }.png`;
   }
@@ -283,7 +283,7 @@ function update() {
 
   // 地面の画像を表示
   var groundImage = new Image();
-  groundImage.src = "./Trampolinedog/images/ground-01/base.png";
+  groundImage.src = "./images/ground-01/base.png";
   for (const block of blocks) {
     ctx.drawImage(groundImage, block.x, block.y, block.w, block.h);
   }
